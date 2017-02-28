@@ -1,0 +1,15 @@
+{
+  "name": "Eeyore.js",
+  "version": "1.0.0",
+  "description": "A module for retriving JSON of a Github user's pinned repositories with an optional level of caching.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "andrewsosa001",
+  "license": "ISC",
+  "dependencies": {
+    "aimer": "^1.3.0",
+    "node-persist": "^2.0.8"
+  }
+}
