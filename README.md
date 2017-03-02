@@ -1,19 +1,21 @@
-# Eeyore.js [![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore.js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore.js) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# Eeyore.js [![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore-js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore-js)
+
+[![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore.js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore.js) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 A module for retriving JSON of a Github user's pinned repositories with an optional level of caching.
 
 ## Installation
 
 ```bash
-npm install --save Eeyore.js
+npm install --save eeyore
 ```
 
 ## Usage
 
 ```javascript
-var EeyoreJs = require('Eeyore.js')
+var eeyore = require('eeyore')
 
-EeyoreJs()  // => true
+eeyore('<gh-username>').then(/*...*/);
 ```
 
 ## License

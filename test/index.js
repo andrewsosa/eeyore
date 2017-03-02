@@ -1,5 +1,5 @@
 import assert from 'assert';
-import eeyoreJs from '../lib';
+import eeyore from '../lib';
 
 var now = require('performance-now');
 
@@ -7,7 +7,7 @@ describe('Eeyore.js', function () {
   // Generic functionality test
   it('should grab some sort of result.', function () {
     // assert(false, 'we expected this package author to add actual unit tests.');
-    eeyoreJs('andrewsosa001').then(res => {
+    eeyore('andrewsosa001').then(res => {
       if (res) {
         // console.log(res);
         assert(true, 'We got something! Maybe it is what we wanted.');
@@ -24,12 +24,12 @@ describe('Eeyore.js', function () {
 
     // first run, no caching
     var before1 = now();
-    eeyoreJs('andrewsosa001', options).then(() => {});
+    eeyore('andrewsosa001', options).then(() => {});
     var diff1 = now() - before1;
 
     // second fun, use cache
     var before2 = now();
-    eeyoreJs('andrewsosa001', options).then(() => {});
+    eeyore('andrewsosa001', options).then(() => {});
     var diff2 = now() - before2;
 
     // console.log(diff1)
