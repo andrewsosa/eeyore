@@ -2,14 +2,53 @@
   "name": "Eeyore.js",
   "version": "1.0.0",
   "description": "A module for retriving JSON of a Github user's pinned repositories with an optional level of caching.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "github.com/andrewsosa001/Eeyore-js#readme",
   "author": "andrewsosa001",
+  "files": [
+    "dist"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "Github",
+    "Repositories",
+    "Gulp"
+  ],
+  "scripts": {
+    "test": "gulp",
+    "prepublish": "gulp prepublish"
+  },
   "license": "ISC",
   "dependencies": {
     "aimer": "^1.3.0",
     "node-persist": "^2.0.8"
-  }
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "6.9.0",
+    "babel-register": "^6.9.0",
+    "del": "^2.0.2",
+    "eslint": "^3.1.1",
+    "eslint-config-xo-space": "^0.15.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^4.0.0",
+    "performance-now": "^2.1.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "git@github.com:andrewsosa001/Eeyore-js.git"
 }
