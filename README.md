@@ -1,4 +1,5 @@
-# Eeyore.js [![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore-js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore-js)
+# Eeyore.js
+[![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore-js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore-js)
 [![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore.js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore.js)
 [![Coverage Status](https://coveralls.io/repos/github/andrewsosa001/Eeyore-js/badge.svg?branch=master)](https://coveralls.io/github/andrewsosa001/Eeyore-js?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
@@ -14,9 +15,11 @@ npm install --save eeyore
 ## Usage
 
 ```javascript
-var eeyore = require('eeyore')
+var eeyore = require('eeyore');
 
-eeyore('<gh-username>').then(/*...*/);
+eeyore('<gh-username>').then(res => {
+    // handle json response
+});
 ```
 
 ## License
