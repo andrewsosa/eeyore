@@ -1,6 +1,6 @@
 {
   "name": "eeyore",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "A module for retriving JSON of a Github user's pinned repositories with an optional level of caching.",
   "homepage": "github.com/andrewsosa001/Eeyore-js#readme",
   "author": "andrewsosa001",
