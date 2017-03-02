@@ -11,7 +11,9 @@
   "keywords": [
     "Github",
     "Repositories",
-    "Gulp"
+    "Pinned Repositories",
+    "Repos",
+    "Pinned Repos"
   ],
   "scripts": {
     "test": "gulp",

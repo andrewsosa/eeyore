@@ -6,4 +6,4 @@
 
 'use strict';
 
-module.exports = require('./lib/eeyore');
+module.exports = require('./dist/eeyore');
