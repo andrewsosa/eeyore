@@ -14,11 +14,26 @@ npm install --save eeyore
 
 ## Usage
 
+#### No Cache
+No caching by default.
 ```javascript
 var eeyore = require('eeyore');
 
-eeyore('<gh-username>').then(res => {
-    // handle json response
+eeyore('gh-username').then(repos => {
+    // response is a json array
+});
+```
+
+#### With Cache
+Use second parameter to add caching. Options are passed directly to the `node-persist` library, see the docs [here](https://github.com/simonlast/node-persist#options).
+```javascript
+var eeyore = require('eeyore');
+
+eeyore('gh-username', {
+    dir: './tmp/',
+    ttl:true
+}).then(repos => {
+    // response is a json array
 });
 ```
 
@@ -34,8 +49,12 @@ MIT
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
+### Help Wanted
+
+Need help improving coverage tests. 
+
 Crafted with <3 by Andrew Sosa ([@andrewsosa001](https://twitter.com/andrewsosa001)).
 
 ***
 
-> This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).
+> This package was initially generated with [yeoman](http://yeoman.io) and the [node generator](https://github.com/yeoman/generator-node).
