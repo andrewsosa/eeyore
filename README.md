@@ -10,7 +10,7 @@
 
 ```bash
 # npm
-npm install --save eeyore
+npm i eeyore
 
 # yarn
 yarn add eeyore

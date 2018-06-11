@@ -1,7 +1,7 @@
 {
   "name": "eeyore",
   "description": "Retrieve your (or someone else's) pinned Github repos!",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Andrew Sosa <andrew@andrewsosa.com> (http://andrewsosa.com)",
   "bugs": {
     "url": "https://github.com/andrewsosa/eeyore/issues",
@@ -86,6 +86,9 @@
     "lint-2": "standard && remark . -qf",
     "precommit": "lint-staged && npm test",
     "test": "npm run lint && npm run test-coverage",
-    "test-coverage": "cross-env NODE_ENV=test nyc ava"
+    "test-coverage": "cross-env NODE_ENV=test nyc ava",
+    "preversion": "npm test",
+    "version": "git add -u",
+    "postversion-manual": "git push && git push --tags"
   }
 }
