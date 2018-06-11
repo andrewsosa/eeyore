@@ -1,57 +1,91 @@
 {
   "name": "eeyore",
-  "version": "1.2.0",
-  "description": "A module for retriving JSON of a Github user's pinned repositories with an optional level of caching.",
-  "homepage": "github.com/andrewsosa001/Eeyore-js#readme",
-  "author": "andrewsosa001",
-  "files": [
-    "dist"
-  ],
-  "main": "index.js",
-  "keywords": [
-    "Github",
-    "Repositories",
-    "Pinned Repositories",
-    "Repos",
-    "Pinned Repos"
-  ],
-  "scripts": {
-    "test": "gulp",
-    "prepublish": "gulp prepublish"
+  "description": "Retrieve your (or someone else's) pinned Github repos!",
+  "version": "2.0.0",
+  "author": "Andrew Sosa <andrew@andrewsosa.com> (http://andrewsosa.com)",
+  "bugs": {
+    "url": "https://github.com/andrewsosa/eeyore/issues",
+    "email": "andrew@andrewsosa.com"
   },
-  "license": "ISC",
+  "contributors": [
+    "Andrew Sosa <andrew@andrewsosa.com> (http://andrewsosa.com)"
+  ],
   "dependencies": {
-    "aimer": "^1.3.0",
-    "node-persist": "^2.0.8"
+    "aimer": "1.3.0"
+  },
+  "ava": {
+    "failFast": true,
+    "verbose": true
   },
   "devDependencies": {
-    "babel-core": "^6.11.4",
-    "babel-eslint": "^6.1.2",
-    "babel-preset-es2015": "6.9.0",
-    "babel-register": "^6.9.0",
-    "del": "^2.0.2",
-    "eslint": "^3.1.1",
-    "eslint-config-xo-space": "^0.15.0",
-    "eslint-plugin-babel": "^3.3.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-coveralls": "^0.1.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-ignore": "^2.0.2",
-    "gulp-istanbul": "^1.0.0",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-mocha": "^3.0.1",
-    "gulp-nsp": "^2.1.0",
-    "gulp-plumber": "^1.0.0",
-    "isparta": "^4.0.0",
-    "performance-now": "^2.1.0"
+    "auto-bind": "^1.1.0",
+    "ava": "^0.22.0",
+    "codecov": "^2.3.0",
+    "cross-env": "^5.0.5",
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
+    "nyc": "^11.1.0",
+    "prettier": "^1.6.1",
+    "remark-cli": "^4.0.0",
+    "remark-preset-github": "^0.0.6",
+    "standard": "latest"
   },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
+  "engines": {
+    "node": ">=8.3"
   },
-  "repository": "git@github.com:andrewsosa001/Eeyore-js.git"
+  "homepage": "https://github.com/andrewsosa/eeyore",
+  "keywords": [
+    "github",
+    "repos",
+    "pinned-repos",
+    "pins",
+    "nodejs",
+    "javascript"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql}": [
+      "prettier --write --single-quote --trailing-comma none",
+      "git add"
+    ],
+    "*.md": [
+      "remark . -qfo",
+      "git add"
+    ]
+  },
+  "main": "index.js",
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100,
+    "reporter": [
+      "lcov",
+      "html",
+      "text"
+    ]
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-github"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewsosa/eeyore"
+  },
+  "scripts": {
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "standard",
+    "lint-2": "standard && remark . -qf",
+    "precommit": "lint-staged && npm test",
+    "test": "npm run lint && npm run test-coverage",
+    "test-coverage": "cross-env NODE_ENV=test nyc ava"
+  }
 }

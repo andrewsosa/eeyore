@@ -1,12 +1,5 @@
 language: node_js
 node_js:
-  - stable
-  - '5'
-  - '4'
-  - v7
-  - v6
-  - v5
-  - v4
-before_script:
-  - npm install -g gulp
-script: gulp
+  - '8'
+after_success:
+  npm run coverage
