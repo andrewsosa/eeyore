@@ -1,6 +1,6 @@
 # Eeyore.js
 
-> A module for retriving JSON of a Github user's pinned repositories with an optional level of caching.
+> Retrieve your (or someone else's) pinned Github repos!
 
 [![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore-js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore-js)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
