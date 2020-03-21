@@ -1,12 +1,17 @@
-# Eeyore.js
+## This package no longer works.
 
-> Retrieve your (or someone else's) pinned Github repos!
+Github changed the markup for the profile's pinned repos. This package no longer works. __No Version Works__. __Do Not Use This__.
+
+I've removed all package dependencies for extra security in case anyone installs this for any reason.
+
+# ~~Eeyore.js~~ RIP :skull:
+
+> ~~Retrieve your (or someone else's) pinned Github repos!~~
 
 [![Build Status](https://secure.travis-ci.org/andrewsosa001/Eeyore-js.svg?branch=master)](https://travis-ci.org/andrewsosa001/Eeyore-js)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-
-## Installation
+## ~~Installation~~ :skull:
 
 ```bash
 # npm
@@ -17,7 +22,7 @@ yarn add eeyore
 ```
 
 
-## Usage
+## ~~Usage~~ :skull:
 
 ```javascript
 var eeyore = require('eeyore');
